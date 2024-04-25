@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WORKERS UPDATES FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">">
+
+
+
+</head>
+<body style="background-color: maroon">
+
+<div class="container  row p-8 bg-primary mx-auto mt-5">
+  <div class="col-md-8">
+     <form  method="POST" action="/updatestudent/{{data.id}}" class="container-fluid row mx-auto"   >
+         {% csrf_token  %}
+         <div class="col-md-6">
+             <label>FIRSTNAME</label>
+             <input type="text" name="firstname" value=" {{data.workersname  }} " id="first_name"  placeholder="enter your firstname" class="form control">
+
+             <label>LASTNAME</label>
+             <input type="text" name="lastname" value=" {{ data.workersname }}" id="last_name" placeholder="enter your lastname" class="form control">
+         </div>
+
+
+         <div class="col-md-6">
+              <label>PHONE NUMBER</label>
+              <input type="number" name="number" value="{{ data.workersphone }} " id="phone" placeholder="enter you phone number" class="form control">
+
+              <label>AGE</label>
+              <input type="number" name="age" value="{{ data.workersage }}" id="age" placeholder="enter your age" class="form control">
+         </div>
+
+         <div class="col-md-6">
+              <label>EMAIL</label>
+              <input type="text" name="email" value="{{ data.workersemail }}" id="email" placeholder="enter your email account">
+
+              <label>FIELD OF SPECIALITY</label>
+              <input type="text"  name="field" value=" {{ data.workersfield }}"  id="field">
+
+         </div>
+
+         <div class="col-md-6">
+             <button type="UPDATE" class="btn btn-primary">UPDATE</button>
+         </div>
+     </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+</html>
