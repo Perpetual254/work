@@ -7,41 +7,43 @@
 
 
 </head>
-<body style="background-color: lime">
+<body style="background-image:linear-gradient(To bottom,lightcoral,yellow);">
 
-<div class="container bg-success row mt-5 mx-auto pt-4">
+<div class="container bg-white row mt-5 mx-auto pt-4">
   <div class="col-md-8">
      <form  method="POST" action="/addworker" class="container-fluid row mx-auto">
          {% csrf_token  %}
-
+         <h1 style="text-align: center">WORKERS DETAILS</h1>
          <div class="col-md-6">
              <label>FIRSTNAME</label>
-             <input type="text" name="firstname" placeholder="enter your firstname" class="form control">
+             <input type="text" name="firstname" placeholder="enter your firstname" class="form control" style="margin-bottom: 20px">
 
              <label>LASTNAME</label>
-             <input type="text" name="lastname" placeholder="enter your lastname" class="form control">
+             <input type="text" name="lastname" placeholder="enter your lastname" class="form control" style="margin-top: 10px;margin-bottom: 10px">
          </div>
 
 
          <div class="col-md-6">
               <label>PHONE NUMBER</label>
-              <input type="number" name="number" placeholder="enter you phone number" class="form control">
+              <input type="number" name="number" placeholder="enter you phone number" class="form control" style="margin-bottom: 20px">
 
               <label>AGE</label>
-              <input type="number" name="age" placeholder="enter your age" class="form control">
+              <input type="number" name="age" placeholder="enter your age" class="form control" style="margin-top: 10px">
+
+
+
          </div>
 
          <div class="col-md-6">
               <label>EMAIL</label>
-              <input type="text" name="email" placeholder="enter your email account">
+              <input type="text" name="email" placeholder="enter your email account" style="margin-top: 10px">
 
               <label>FIELD OF SPECIALITY</label>
-              <input type="text"  name="field">
-
+              <input type="text"  name="field" style="margin-top: 10px">
          </div>
 
          <div>
-             <button type="SIGN IN" class="btn btn-primary">SIGN IN</button>
+             <button type="SIGN IN" class="btn btn-primary" style="margin-top: 20px">SIGN IN</button>
          </div>
      </form>
   </div>
@@ -56,8 +58,8 @@
                 <th>AGE</th>
                 <th>EMAIL</th>
                 <th>FIELD</th>
-                <th>EDIT</th>
                 <th>DELETE</th>
+                <th>EDIT</th>
               </tr>
 
 
@@ -73,13 +75,16 @@
                   <td>   {{ workers.email }}         </td>
                   <td>   {{ workers.field }}         </td>
 
-                  <td>
-                      <a href="/editworker/{{workers.id}} " class="btn btn-primary btn-outline-danger">Edit </a>
-                  </td>
+
 
                   <td>
                        <a href="/deleteworker/{{workers.id}}" class="btn btn-primary btn-outline-danger">Delete</a>
                   </td>
+
+                  <td>
+                       <a href="/editworker/{{ workers.id }}" class="btn btn-primary btn-outline-danger">Edit</a>
+                  </td>
+
              </tr>
 
               {% endfor %}

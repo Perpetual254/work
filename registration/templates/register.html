@@ -7,12 +7,10 @@
 
 </head>
 <body>
-{% load static %}
-<img src="{% static 'images/cool.png' %}">
 
  <nav class="navbar navbar-expand-sm bg-dark navbar-dark mx-auto">
   <div class="container-fluid">
-    <a style="text-decoration: darkblue ;text-decoration-line: underline" class="navbar-brand" href="#">WORKERS UNION</a>
+    <a style="color: maroon ;text-decoration-line: underline" class="navbar-brand" href="#">WORKERS UNION</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,39 +29,38 @@
 </nav>
 
 
-<div class="container  row p-8 bg-primary mx-auto mt-5" >
-  <div class="col-md-8 " >
-    <form class="container-fluid row mx-auto">
+<div style="background-image: linear-gradient(to bottom,orange,darkorange )"class="container  row p-4 mx-auto mt-5" >
+  <div class="col-md-8 mt-5" >
+    <form style="margin-bottom: 100px;margin-left: 170px" class="container-fluid row  bg-white ">
         <h1 style="text-align: center;text-decoration-line: underline;color: blue">REGISTRATION OF WORKERS </h1>
+        <span style="text-align: center">fill out the form carefully for registration</span>
         <div class="col-md-6">
              <label>FIRSTNAME</label>
-             <input type="text" name="firstname" placeholder="enter your firstname" class="form control">
+             <input type="text" name="firstname" placeholder="enter your firstname" class="form control" style="margin-bottom: 40px;margin-top: 30px">
 
               <label>LASTNAME</label>
-              <input type="text" name="lastname" placeholder="enter your lastname " class="form control">
+              <input type="text" name="lastname" placeholder="enter your lastname " class="form control" style="margin-bottom: 20px;margin-top: 30px">
         </div>
 
         <div class="col-md-6">
              <label>AGE</label>
-             <input type="number" name="age" placeholder="enter your age " class="form control" >
+             <input type="number" name="age" placeholder="enter your age " class="form control" style="margin-top: 30px">
 
-             <label>EMAIL</label>
-             <input type="text" name="email" placeholder="enter your email">
-
+             <label>PHONENUMBER</label>
+             <input type="text" name="phone" placeholder="enter your phone number" class=" form control" style="margin-top: 70px">
         </div>
 
-        <div>
-              <button type="REGISTER" class="btn btn-success">REGISTER</button>
+        <div class="col-md-12">
+               <label>EMAIL</label>
+               <input type="text" name="email" class="form control" placeholder="enter your email" style="" >
 
+               <button type="REGISTER" class="btn btn-success btn-right " style="margin-top: 100px;">REGISTER</button>
         </div>
 
     </form>
   </div>
 
-    {% load static %}
-  <div class="float - right" style="padding-left: 750px">
-     <img src="{% static 'images/workers.jpeg' %} " width="450px" height="500px">
-  </div>
+
 
 
 

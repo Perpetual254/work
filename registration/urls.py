@@ -9,7 +9,7 @@ urlpatterns = [
     path('editworker/<id>', views.editworker, name='editworker'),
     path('deleteworker/<id>', views.deleteworker ),
     path('updateworker/<id>', views.updateworker, name='updateworker'),
-
+    path('editworker/<id>', views.editworker, name='editworker')
 
 
 

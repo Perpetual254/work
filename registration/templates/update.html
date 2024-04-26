@@ -8,35 +8,36 @@
 
 
 </head>
-<body style="background-color: maroon">
+<body>
 
-<div class="container  row p-8 bg-primary mx-auto mt-5">
+<div style="background-image: linear-gradient(to right,mediumpurple,darkmagenta)" class="container  row p-8 bg-primary mx-auto mt-5">
   <div class="col-md-8">
-     <form  method="POST" action="/updatestudent/{{data.id}}" class="container-fluid row mx-auto"   >
+     <form  method="POST" action="/updateworker/{{data.id}}" class="container-fluid row mx-auto"  style="margin-left: 30px" >
+         <h1 style="text-align: center">UPDATE FORM</h1>
          {% csrf_token  %}
          <div class="col-md-6">
              <label>FIRSTNAME</label>
-             <input type="text" name="firstname" value=" {{data.workersname  }} " id="first_name"  placeholder="enter your firstname" class="form control">
+             <input type="text" name="firstname" value=" {{data.first_name  }} " id="firstname"  placeholder="enter your firstname" class="form control" style="margin-bottom: 40px">
 
              <label>LASTNAME</label>
-             <input type="text" name="lastname" value=" {{ data.workersname }}" id="last_name" placeholder="enter your lastname" class="form control">
+             <input type="text" name="lastname" value=" {{ data.last_name }}" id="lastname" placeholder="enter your lastname" class="form control" style="margin-bottom: 40px">
          </div>
 
 
          <div class="col-md-6">
               <label>PHONE NUMBER</label>
-              <input type="number" name="number" value="{{ data.workersphone }} " id="phone" placeholder="enter you phone number" class="form control">
+              <input type="number" name="phonenumber" value="{{ data.phone_number }} " id="phonenumber" placeholder="enter you phone number" class="form control" style="margin-bottom: 40px">
 
               <label>AGE</label>
-              <input type="number" name="age" value="{{ data.workersage }}" id="age" placeholder="enter your age" class="form control">
+              <input type="number" name="age" value="{{ data.age }}" id="age" placeholder="enter your age" class="form control" style="margin-bottom: 40px">
          </div>
 
          <div class="col-md-6">
-              <label>EMAIL</label>
-              <input type="text" name="email" value="{{ data.workersemail }}" id="email" placeholder="enter your email account">
+              <label for="email" class="form-label">EMAIL</label>
+              <input type="text" name="email" value="{{ data.email }}" id="email" placeholder="enter your email account" style="margin-bottom: 40px">
 
               <label>FIELD OF SPECIALITY</label>
-              <input type="text"  name="field" value=" {{ data.workersfield }}"  id="field">
+              <input type="text"  name="field" value=" {{ data.field }}"  id="field" style="margin-bottom: 20px">
 
          </div>
 

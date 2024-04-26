@@ -40,25 +40,29 @@ def addworker(request):
     variable={'data':data}
     return render(request,'dashboard.html',variable)
 
-
+"""
 def editworker(request,id):
-   data = workers.objects.get(id=id)
+   data = workers.objects.get(id=id);
    variable={'data':data}
    return render(request,'update.html',variable)
-
+"""
 def updateworker(request, id):
     if request.method == 'POST':
-       first_name = request.POST['firstname']
-       last_name = request.POST['lastname']
-       phone = request.POST['phone']
+       firstname = request.POST['firstname']
+       lastname = request.POST['lastname']
+       phonenumber = request.POST['phonenumber']
        age = request.POST['age']
+       email = request.POST['email']
        field = request.POST['field']
 
+       editworker = workers.objects.get(id=id)
+
        #modify the workers details based on the id given
-       editworker=workers.objects.get(id=id)
-       editworker.workersname=first_name
-       editworker.workersname=last_name
-       editworker.phone=phone
+       editworker = workers.objects.get(id=id)
+       editworker .first_name =firstname
+       editworker.last_name=lastname
+       editworker.phone_number=phonenumber
+       editworker.email=email
        editworker.age=age
        editworker.field=field
        editworker.save()
@@ -68,6 +72,11 @@ def deleteworker(request, id):
   deleteworker = workers.objects.get(id=id)
   deleteworker.delete()
   return redirect('/dashboard')
+
+def editworker(request, id):
+   data = workers.objects.get(id=id);
+   variable={'data':data}
+   return render(request,'update.html',variable)
 
 
 # Create your views here.
