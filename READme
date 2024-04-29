@@ -1,7 +1,0 @@
-                            in this project i was able to bring out the crud functionality where by i can delete edit and update data 
-                            mainly to understand wat changes i have done u need to understand django which is uses python to build a backend framework
-                                                      for your project and bring functionality with your work .........
-                                                      in django the crud functionality is the most important function of all......
-                                             to set it up eg lets say a sytem that registers workers n shows you the info in a table
-            first of all you have to call out a function in your form then head for your apps urls and create a path then from this you go to your views.py where you call out a 
-                                      function and give the specifications of wat you would like to occur in your form 
