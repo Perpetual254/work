@@ -7,9 +7,9 @@
 
 
 </head>
-<body style="background-image:linear-gradient(To bottom,lightcoral,yellow);">
+<body style="background-image:linear-gradient(To right,lightcoral,lightcoral);">
 
-<div class="container bg-white row mt-5 mx-auto pt-4">
+<div class="container bg-primary row mt-5 mx-auto pt-4">
   <div class="col-md-8">
      <form  method="POST" action="/addworker" class="container-fluid row mx-auto">
          {% csrf_token  %}
@@ -38,7 +38,7 @@
               <label>EMAIL</label>
               <input type="text" name="email" placeholder="enter your email account" style="margin-top: 10px">
 
-              <label>FIELD OF SPECIALITY</label>
+              <label>FIELD OF WORK</label>
               <input type="text"  name="field" style="margin-top: 10px">
          </div>
 
