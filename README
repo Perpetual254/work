@@ -4,3 +4,29 @@
  in django the crud functionality is the most important function of all...to set it up eg lets say a sytem that registers workers n shows you the info in a table
  first of all you have to call out a function in your form then head for your apps urls and create a path then from this you go to your views.py where you call out a 
  function and give the specifications of wat you would like to occur in your form 
+                                                   #### HOW TO PERFORM THE CRUD FUNCTION
+
+To be able to perform the crud function .....You must first create  model and give it the same fields as those of the one in your form and in each you must give them their diff. characteristics
+From there you should migrate your work to ensure that a table has been created in your database you should ensure that you have registered your model in the django admin
+from django admin we are able to create,update and delete work in your database.
+
+to be able to create,delete and update your work in the form,you must create an action in your form 'add' and with a method known as 'POST'.from this you specify the path 
+from your apps/urls.py then to the views where you give specifications to the directions of the url.This will enable you to be able to be add people you must save this data by creating a dictionary that takes in the
+datayou have field and saves in the database.This enables you to add peopleand saves the data into your database
+
+You can also edit and delete your work by by creating urls which you direct to the app/urls.py and call out the function in the views.py where by you edit your work by 
+specifying the objects name in order to retrieve data from the database and update you work this goes hand in hand with the delete function but the difference is that 
+in delete you should be able to delete your data from the database and the changes should be observed in the table that was created in the template given ....eg dashboard.html
+
+In editing you redirect to the update.html template in which in the form you use a method known as 'POST' to hide theusers infomation and you use an action where you create a url
+and give it the path and call out a function in the views.py in order to be able to edit your data depending on the fields given in the model then you save this data and showcase
+it on the relevant page you would like ........THIS IS HOW TO SUCCESSFULLY PERFORM A CRUD FUNCTION
+
+
+
+
+
+
+
+
+
